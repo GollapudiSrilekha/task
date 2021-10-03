@@ -1,0 +1,27 @@
+<?php
+    function Csv()
+    {
+        if (($openTask1 = fopen("task1.csv", "r")) !== FALSE) {
+
+            while (($data = fgetcsv($openTask1, 100, ",")) !== FALSE) {
+                $dinosaurs1 = array($data[0], $data[1], $data[2]);
+            }
+            fclose($openTask1);
+        }
+        if (($openTask2 = fopen("task2.csv", "r")) !== FALSE) {
+
+            while (($data = fgetcsv($openTask2, 100, ",")) !== FALSE) {
+                $dinosaurs2 = array($data[0], $data[1], $data[2]);
+            }
+            fclose($openTask1);
+        }
+    }
+
+   function Csv2()
+   {
+       $g=9.8;
+       $speed= echo" <p> (($dianosaur1/$dianosaur2)-1)*SQRT($dianosaur2*g) <br/></p>\n";
+       echo $speed"<br/>\n";
+
+   }
+?>
